@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4e7600117b7034d3",
+        "id": "35d0adbcf48b4915",
         "type": "tabs",
         "children": [
           {
-            "id": "69efe493d2963bf6",
+            "id": "66e70232d508b4ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -65,11 +65,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4835bfd4c8b80940",
@@ -146,23 +148,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "69efe493d2963bf6",
+  "active": "66e70232d508b4ca",
   "lastOpenFiles": [
     "home/CSCI-316_Tao-Summer-2024.md~",
-    "home/4913",
-    "home/1722298641-NHLN.md",
     "home/CSCI-316_Tao-Summer-2024.md",
+    "home/4913",
+    ";",
     "home/regex-and-cfg.md",
+    "home/regex-and-cfg.md~",
+    "home/1722298641-NHLN.md",
     "^\"",
     "home/1722230597-WOFV.md",
-    "home/regex-and-cfg.md~",
     "home/CSCI 316 - Tao Summer 2024.md~",
     "home/1722229188-ZOOB.md~",
     "home/1722229188-ZOOB.md",
     "asset/images",
     "asset",
     "asset/books",
-    "home",
     "2024-07-28.md",
     "Untitled.canvas"
   ]

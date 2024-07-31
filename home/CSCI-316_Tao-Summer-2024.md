@@ -61,7 +61,6 @@ Collections of problems given by professor Tao.
 >
 > ```mermaid
 > stateDiagram-v2
-> direction LR
 >
 > [*] --> 1
 > 1 --> 2: lparen
@@ -77,3 +76,126 @@ Collections of problems given by professor Tao.
 > 7 --> [*]
 >
 > ```
+
+> [!Questions]- Question 2.1/2.2 C
+> Numeric constants in C. These are octal, decimal, or hexadecimal integers, or
+> decimal or hexadecimal floating-point values. An octal integer begins with 0,
+> and may contain only the digits 0–7. A hexadecimal integer begins with 0x or
+> 0X, and may contain the digits 0–9 and a/A–f/F. A decimal floating-point value
+> has a fractional portion (beginning with a dot) or an exponent (beginning with
+> E or e). Unlike a decimal integer, it is allowed to start with 0. A hexadecimal
+> floating-point value has an optional fractional portion and a mandatory
+> exponent (beginning with P or p). In either decimal or hexadecimal, there may
+> be digits to the left of the dot, the right of the dot, or both, and the
+> exponent itself is given in decimal, with an optional leading + or - sign. An
+> integer may end with an optional U or u (indicating “unsigned”), and/or L or l
+> (indicating “long”) or LL or ll (indicating “long long”). A floating-point
+> value may end with an optional F or f (indicating “float”—single precision) or
+> L or l (indicating “long”—double precision).
+>
+> > [!octal]- **Octal Integer:**
+> >
+> > - begins with 0 and can only contain digits 0-7.
+> >
+> >   **`0[0-7]+`**
+> >
+> > ```mermaid
+> > stateDiagram-v2
+> > direction LR
+> >
+> > [*] --> 1
+> > 1 --> 2: zero
+> > 2 --> 2: 0, 1, 2, 3, 4, 5, 6, 7
+> > 2 --> [*]
+> > ```
+>
+> > [!hex]- **Hexadecimal Integer:**
+> >
+> > - begins with 0x or 0X.
+> > - may contain digits from 0-9 and a/A-f/F.
+> >
+> >   **`0[xX]([0-9a-fA-F]+)([uU] | [lL])`**
+> >
+> > ```mermaid
+> > stateDiagram-v2
+> >
+> > [*] --> 1
+> > 1 --> 2: x or X
+> > 2 --> 3: 0-9 or a-f or A-F
+> > 3 --> 3: 0-9 or a-f or A-F
+> > 3 --> 4: u or U
+> > 3 --> 6: l or L
+> > 4 --> 5: l or L
+> > 5 --> [*]
+> > 6 --> [*]
+> >
+> > ```
+>
+> > [!dec]- **Decimal Floating-Point:**
+> >
+> > - has numbers on both sides of the dot.
+> > - may have a exponent beginning with E or e.
+> > - may begin with a 0.
+> >
+> >   **`(([0-9]+[.][0-9]*)|([.][0-9]+)|([0-9]+[.][0-9]+))([eE][+-]?[0-9]+)?([fFlL])?`**
+> >
+> > ```mermaid
+> > stateDiagram-v2
+> >
+> > [*] --> 1
+> > 1 --> 2: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+> > 2 --> 2: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+> > 2 --> 3: dot
+> > 3 --> 4: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+> > 4 --> 4: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+> > 4 --> [*]
+> > 4 --> 7: e or E
+> > 7 --> 8: + or -
+> > 8 --> 9: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+> > 9 --> 9: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+> > 9 --> [*]
+> > 1 --> 5: dot
+> > 5 --> 6: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+> > 6 --> 6: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+> > 6 --> [*]
+> > 6 --> 10: e or E
+> > 10 --> 11: + or -
+> > 11 --> 12: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+> > 12 --> 12: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+> > 12 --> [*]
+> > ```
+>
+> > [!hex]- **Hexadecimal Floating-Point:**
+> >
+> > - has a optional fractional portion.
+> > - mandatory exponent partion (beginning with P or p).
+> >
+> >   **`0[xX]([0-9a-fA-F]+[.][0-9a-fA-F]*){1}([pP][+-]?[0-9]+)([fFlL])?`**
+> >
+> > ```mermaid
+> > stateDiagram-v2
+> >
+> > [*] --> 1
+> > 1 --> 6
+> > 1 --> 2: x or X
+> > 2 --> 3: 0-9 or a-f or A-F
+> > 3 --> 3: 0-9 or a-f or A-F
+> > 3 --> 4: dot
+> > 4 --> 5: 0-9 or a-f or A-F
+> > 5 --> 5: 0-9 or a-f or A-F
+> > 5 --> 6: p or P
+> > 6 --> 7: + or -
+> > 7 --> 8: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+> > 8 --> 9: f, F, l, F
+> > 9 --> [*]
+> > ```
+
+> [!questions]+ Question 2.1/2.2 D
+> Floating-point constants in Ada. These match the definition of real in Example
+> 2.3, except that (1) a digit is required on both sides of the decimal point, (2)
+> an underscore is permitted between digits, and (3) an alternative numeric base
+> may be specified by surrounding the non-exponent part of the number with pound signs,
+> preceded by a base in decimal (e.g., 16#6.a7#e+2). In this latter case, the
+> letters a . . f (both upper- and lowercase) are permitted as digits. Use of these
+> letters in an inappropriate (e.g., decimal) number is an error, but need not be
+> caught by the scanner.

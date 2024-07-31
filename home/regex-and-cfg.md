@@ -39,9 +39,9 @@ programming languages. Each of the rules in a context-free grammar is known as
 a production. The symbols on the left-hand sides of the productions are known as
 variables, or non-terminals.
 
-Example:
+**Terminals:** are the set of digits on the very last production
 
-Terminals: are the set of digits on the very last production
+**Non-Terminals:** those that don't end the production like E, T, F
 
 ```
 E -> E + T | T
