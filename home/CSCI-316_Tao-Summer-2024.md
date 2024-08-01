@@ -5,6 +5,7 @@ tags:
   - problem-set
   - fsm
   - regex
+  - scopes
 ---
 
 ## Problem Sets
@@ -191,7 +192,7 @@ Collections of problems given by professor Tao.
 > > > 5 --> 6: p or P
 > > > 6 --> 7: + or -
 > > > 7 --> 8: [0-9]
-> > > 8 --> 9: f, F, l, F
+> > > 8 --> 9: f, F, l, L
 > > > 9 --> [*]
 > > > ```
 >
@@ -306,3 +307,94 @@ Collections of problems given by professor Tao.
 > > > 16 --> 12: lambda
 > > > 12 --> [*]
 > > > ```
+
+> [!question]+ Chapter 3 Questions
+>
+> > [!question]- Question 3.6
+> >
+> > ```
+> > procedure main()
+> >   g : integer
+> >   procedure B(a : integer)
+> >       x : integer
+> >       procedure A(n : integer)
+> >           g := n
+> >       procedure R(m : integer)
+> >           write integer(x)
+> >           x /:= 2 – – integer division
+> >           if x > 1
+> >               R(m + 1)
+> >           else
+> >               A(m)
+> >       ––body of B
+> >       x := a × a
+> >       R(1)
+> >   ––body of main
+> >   B(3)
+> >   write integer(g)
+> > ```
+> >
+> > **
+> > a) What does this program print?
+> > b) Show the frames on the stack when A has just been called. For each frame,
+> > show the static and dynamic links.
+> > c) Explain how A finds g.
+> > **
+> >
+> > > [!success]- solution to part a
+> > > **prints:** 9, 4, 2, 3
+> > >
+> > > ```
+> > > g is initialized
+> > > B(3)
+> > > ```
+> > >
+> > > ```
+> > > x is initialized
+> > > x /:= 2 => 9
+> > > x > 1 (true) => R(m + 1)
+> > > R(2)
+> > > ```
+> > >
+> > > ```
+> > > print(x) => 4
+> > > x /:= 2 => 2
+> > > x > 0 (true) => R(m + 1)
+> > > R(3)
+> > > ```
+> > >
+> > > ```
+> > > print(x) => 2
+> > > 2 /:= 2 => 0
+> > > x > 0 (false) => A(m)
+> > > A(3)
+> > > ```
+> > >
+> > > ```
+> > > g := n => 3
+> > > print(g) => 3
+> > > ```
+> >
+> > > [!success]- solution to part b
+> > >
+> > > ```mermaid
+> > > classDiagram
+> > > stack: A(3)
+> > > stack: R(3)
+> > > stack: R(2)
+> > > stack: R(1)
+> > > stack: B(3)
+> > > stack: main
+> > > ```
+> > >
+> > > main should be at the very bottom of the stack.
+> >
+> > > [!success]- solution to part c
+> > > A is able to find g because of the enclosing scope or is a global variable.
+>
+> > [!question]- Question 3.11
+> >
+> > > [!success]- solution
+> > >
+> > > - A is accessable form the produce P since it encloses R
+> > > - C and Z is accessable from the produce of R
