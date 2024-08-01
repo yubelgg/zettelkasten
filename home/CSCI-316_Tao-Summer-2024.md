@@ -406,7 +406,7 @@ Collections of problems given by professor Tao.
 > > > A is able to find g because of the enclosing scope or is a global variable.
 >
 > > [!question]+ Question 3.11
->
+> >
 > > Consider the following pseudocode:
 > >
 > > ```
@@ -466,7 +466,7 @@ Collections of problems given by professor Tao.
 > > > {digit.val := 8}
 > > > {digit.val := 9}
 
-> [!question]+ Chapter 6 Questions
+> [!question]- Chapter 6 Questions
 >
 > > [!question]+ Question 6.18 ([[tree-traversal]])
 > > Revise the algorithm of Figure 6.6 so that it performs an in-order
