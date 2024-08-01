@@ -3,6 +3,6 @@
   "showLineNumber": true,
   "newFileLocation": "folder",
   "newFileFolderPath": "home",
-  "attachmentFolderPath": "asset",
+  "attachmentFolderPath": "home/asset",
   "promptDelete": false
 }
