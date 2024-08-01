@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "home/CSCI-316_Tao-Summer-2024.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "4835bfd4c8b80940",
@@ -150,9 +149,16 @@
   "active": "4267c5240b98eb14",
   "lastOpenFiles": [
     "home/CSCI-316_Tao-Summer-2024.md~",
-    "home/CSCI-316_Tao-Summer-2024.md",
-    "home/4913",
+    "home/tree-traversal.md~",
+    "home/lc-tmpl.md",
     "home/regex-and-cfg.md",
+    "home/tree-traversal.md",
+    "home/CSCI-316_Tao-Summer-2024.md",
+    "asset/images/inorder-traversal.png",
+    "asset/images/preorder-traversal.png",
+    "asset/images/postorder-traversal.png",
+    "home/4913",
+    "home/lc-tmpl.md~",
     "home/1722403751-OHWX.md",
     ";",
     "home/regex-and-cfg.md~",
@@ -163,8 +169,6 @@
     "home/1722229188-ZOOB.md~",
     "home/1722229188-ZOOB.md",
     "asset/images",
-    "asset",
-    "asset/books",
     "2024-07-28.md",
     "Untitled.canvas"
   ]
