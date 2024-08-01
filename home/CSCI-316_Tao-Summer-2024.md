@@ -17,15 +17,16 @@ Collections of problems given by professor Tao.
 > [!info]- **Summer 2024 Book**
 > ![[Programming language pragmatics-Morgan Kaufmann.pdf]]
 
-> [!question]+ Chapter 2 Question
+> [!question]- Chapter 2 Questions
+>
+> Write regular expressions to capture the following and draw the FSM.
 >
 > > [!question]+ Question 2.1/2.2 A ([[regex-and-cfg]])
-> > Write regular expressions to capture the following.
-> > Strings in C. These are delimited by double quotes ("), and may not contain
-> > newline characters. They may contain double-quote or backslash characters
-> > if and only if those characters are “escaped” by a preceding backslash.
-> > You may find it helpful to introduce shorthand notation to represent any
-> > character that is not a member of a small specified set.
+> > Strings in C. These are delimited by double quotes ("), and may not
+> > contain newline characters. They may contain double-quote or backslash
+> > characters if and only if those characters are “escaped” by a preceding
+> > backslash. You may find it helpful to introduce shorthand notation to
+> > represent any character that is not a member of a small specified set.
 > >
 > > > [!success]- solution
 > > >
@@ -50,7 +51,6 @@ Collections of problems given by professor Tao.
 > > > ```
 >
 > > [!question]+ Question 2.1/2.2 B
-> > Write regular expressions to capture the following.
 > > Comments in Pascal. These are delimited by `(* and *)` or by `{ and }`.
 > > They are not permitted to nest.
 > >
@@ -84,20 +84,21 @@ Collections of problems given by professor Tao.
 > > > ```
 >
 > > [!question]+ Question 2.1/2.2 C
-> > Numeric constants in C. These are octal, decimal, or hexadecimal integers, or
-> > decimal or hexadecimal floating-point values. An octal integer begins with 0,
-> > and may contain only the digits 0–7. A hexadecimal integer begins with 0x or
-> > 0X, and may contain the digits 0–9 and a/A–f/F. A decimal floating-point value
-> > has a fractional portion (beginning with a dot) or an exponent (beginning with
-> > E or e). Unlike a decimal integer, it is allowed to start with 0. A hexadecimal
-> > floating-point value has an optional fractional portion and a mandatory
-> > exponent (beginning with P or p). In either decimal or hexadecimal, there may
-> > be digits to the left of the dot, the right of the dot, or both, and the
-> > exponent itself is given in decimal, with an optional leading + or - sign. An
-> > integer may end with an optional U or u (indicating “unsigned”), and/or L or l
-> > (indicating “long”) or LL or ll (indicating “long long”). A floating-point
-> > value may end with an optional F or f (indicating “float”—single precision) or
-> > L or l (indicating “long”—double precision).
+> > Numeric constants in C. These are octal, decimal, or hexadecimal integers,
+> > or decimal or hexadecimal floating-point values. An octal integer begins
+> > with 0, and may contain only the digits 0–7. A hexadecimal integer begins
+> > with 0x or 0X, and may contain the digits 0–9 and a/A–f/F. A decimal
+> > floating-point value has a fractional portion (beginning with a dot) or an
+> > exponent (beginning with E or e). Unlike a decimal integer, it is allowed
+> > to start with 0. A hexadecimal floating-point value has an optional
+> > fractional portion and a mandatory exponent (beginning with P or p). In
+> > either decimal or hexadecimal, there may be digits to the left of the dot,
+> > the right of the dot, or both, and the exponent itself is given in decimal,
+> > with an optional leading + or - sign. An integer may end with an optional
+> > U or u (indicating “unsigned”), and/or L or l (indicating “long”) or LL or
+> > ll (indicating “long long”). A floating-point value may end with an
+> > optional F or f (indicating “float”—single precision) or L or l (indicating
+> > “long”—double precision).
 > >
 > > > [!success]- octal integer solution
 > > >
@@ -198,13 +199,14 @@ Collections of problems given by professor Tao.
 >
 > > [!question]+ Question 2.1/2.2 D
 > > Floating-point constants in Ada. These match the definition of real in
-> > Example 2.3, except that (1) a digit is required on both sides of the decimal
-> > point, (2) an underscore is permitted between digits, and (3) an alternative
-> > numeric base may be specified by surrounding the non-exponent part of the
-> > number with pound signs, preceded by a base in decimal (e.g., 16#6.a7#e+2).
-> > In this latter case, the letters a . . f (both upper- and lowercase) are
-> > permitted as digits. Use of these letters in an inappropriate (e.g., decimal)
-> > number is an error, but need not be caught by the scanner.
+> > Example 2.3, except that (1) a digit is required on both sides of the
+> > decimal point, (2) an underscore is permitted between digits, and (3) an
+> > alternative numeric base may be specified by surrounding the
+> > non-exponent part of the number with pound signs, preceded by a base in
+> > decimal (e.g., 16#6.a7#e+2). In this latter case, the letters a . . f
+> > (both upper- and lowercase) are permitted as digits. Use of these letters
+> > in an inappropriate (e.g., decimal) number is an error, but need not be
+> > caught by the scanner.
 > >
 > > > [!success]- solution
 > > >
@@ -230,15 +232,16 @@ Collections of problems given by professor Tao.
 >
 > > [!question]+ Question 2.1/2.2 E
 > > Inexact constants in Scheme. Scheme allows real numbers to be explicitly
-> > inexact (imprecise). A programmer who wants to express all constants using
-> > the same number of characters can use sharp signs (#) in place of any
-> > lower-significance digits whose values are not known. A base-10 constant
-> > without exponent consists of one or more digits followed by zero of more
-> > sharp signs. An optional decimal point can be placed at the beginning, the
-> > end, or anywhere in-between. (For the record, numbers in Scheme are actually
-> > a good bit more complicated than this. For the purposes of this exercise,
-> > please ignore anything you may know about sign, exponent, radix, exactness
-> > and length specifiers, and complex or rational values.)
+> > inexact (imprecise). A programmer who wants to express all constants
+> > using the same number of characters can use sharp signs (#) in place of
+> > any lower-significance digits whose values are not known. A base-10
+> > constant without exponent consists of one or more digits followed by
+> > zero of more sharp signs. An optional decimal point can be placed at the
+> > beginning, the end, or anywhere in-between. (For the record, numbers in
+> > Scheme are actually a good bit more complicated than this. For the
+> > purposes of this exercise, please ignore anything you may know about
+> > sign, exponent, radix, exactness and length specifiers, and complex or
+> > rational values.)
 > >
 > > > [!success]- solution
 > > >
@@ -267,15 +270,16 @@ Collections of problems given by professor Tao.
 > > > ```
 >
 > > [!question]+ Question 2.1/2.2 F
-> > Financial quantities in American notation. These have a leading dollar sign
-> > ($), an optional string of asterisks (\*—used on checks to discourage fraud),
-> > a string of decimal digits, and an optional fractional part consisting of a
-> > decimal point (.) and two decimal digits. The string of digits to the left of
-> > the decimal point may consist of a single zero (0). Otherwise it must not
-> > start with a zero. If there are more than three digits to the left of the
-> > decimal point, groups of three (counting from the right) must be separated by
-> > commas (,). Example: $\*\*2,345.67. (Feel free to use “productions” to define
-> > abbreviations, so long as the language remains regular.)
+> > Financial quantities in American notation. These have a leading dollar
+> > sign ($), an optional string of asterisks (\*—used on checks to discourage
+> > fraud), a string of decimal digits, and an optional fractional part
+> > consisting of a decimal point (.) and two decimal digits. The string of
+> > digits to the left of the decimal point may consist of a single zero (0).
+> > Otherwise it must not start with a zero. If there are more than three
+> > digits to the left of the decimal point, groups of three (counting from
+> > the right) must be separated by commas (,). Example: $\*\*2,345.67. (Feel
+> > free to use “productions” to define abbreviations, so long as the language
+> > remains regular.)
 > >
 > > > [!success]- solution
 > > >
@@ -308,9 +312,9 @@ Collections of problems given by professor Tao.
 > > > 12 --> [*]
 > > > ```
 
-> [!question]+ Chapter 3 Questions
+> [!question]- Chapter 3 Questions
 >
-> > [!question]- Question 3.6
+> > [!question]+ Question 3.6
 > >
 > > ```
 > > procedure main()
@@ -336,8 +340,8 @@ Collections of problems given by professor Tao.
 > >
 > > **
 > > a) What does this program print?
-> > b) Show the frames on the stack when A has just been called. For each frame,
-> > show the static and dynamic links.
+> > b) Show the frames on the stack when A has just been called. For each
+> > frame, show the static and dynamic links.
 > > c) Explain how A finds g.
 > > **
 > >
@@ -392,9 +396,61 @@ Collections of problems given by professor Tao.
 > > > [!success]- solution to part c
 > > > A is able to find g because of the enclosing scope or is a global variable.
 >
-> > [!question]- Question 3.11
+> > [!question]+ Question 3.11
+> > Consider the following pseudocode:
+> >
+> > ```
+> > procedure P(A, B : real)
+> >     X : real
+> >     procedure Q(B, C : real)
+> >         Y : real
+> >         . . .
+> >     procedure R(A, C : real)
+> >         Z : real
+> >         . . . – – (_)
+> >     . . .
+> > ```
+> >
+> > Assuming static scope, what is the referencing environment at the location
+> > marked by (\*)?
 > >
 > > > [!success]- solution
 > > >
 > > > - A is accessable form the produce P since it encloses R
 > > > - C and Z is accessable from the produce of R
+
+> [!question]- Chapter 4 Questions
+>
+> > [!question]+ Question 4.11
+> > Consider the following CFG for floating-point constants, without
+> > exponential notation. (Note that this exercise is somewhat artificial: the
+> > language in question is regular, and would be handled by the scanner of a
+> > typical compiler.)
+> >
+> > ```
+> > C --> digits . digits
+> > digits --> digit more digits
+> > more digits --> digits | empty
+> > digit --> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+> > ```
+> >
+> > Augment this grammar with attribute rules that will accumulate the value
+> > of the constant into a val attribute of the root of the parse tree. Your
+> > answer should be S-attributed.
+> >
+> > > [!success]- solution
+> > >
+> > > {C.val := digits$_1$.val . digits$_2$.val}
+> > > {digits$_1$.val := digits$_2$.val and more_digits.val}
+> > > {more_digits.val := digits.val}
+> > > {more_digits.val := empty.val}
+> > > {digit.val := 0}
+> > > {digit.val := 1}
+> > > {digit.val := 2}
+> > > {digit.val := 3}
+> > > {digit.val := 4}
+> > > {digit.val := 5}
+> > > {digit.val := 6}
+> > > {digit.val := 7}
+> > > {digit.val := 8}
+> > > {digit.val := 9}

@@ -4,35 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "35d0adbcf48b4915",
+        "id": "d86425f85d9b5936",
         "type": "tabs",
-        "dimension": 70.58449809402796,
         "children": [
           {
-            "id": "66e70232d508b4ca",
+            "id": "4267c5240b98eb14",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "home/CSCI-316_Tao-Summer-2024.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "dc42f6011e7bced6",
-        "type": "tabs",
-        "dimension": 29.415501905972043,
-        "children": [
-          {
-            "id": "7571ddcc2d95d1b7",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           }
         ]
@@ -163,11 +147,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "66e70232d508b4ca",
+  "active": "4267c5240b98eb14",
   "lastOpenFiles": [
     "home/CSCI-316_Tao-Summer-2024.md~",
-    "home/4913",
     "home/CSCI-316_Tao-Summer-2024.md",
+    "home/4913",
     "home/regex-and-cfg.md",
     "home/1722403751-OHWX.md",
     ";",
