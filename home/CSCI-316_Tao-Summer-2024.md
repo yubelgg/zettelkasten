@@ -6,6 +6,9 @@ tags:
   - fsm
   - regex
   - scopes
+  - tree-traveral
+  - code-snippets
+  - tree-traversal
 ---
 
 ## Problem Sets
@@ -22,6 +25,7 @@ Collections of problems given by professor Tao.
 > Write regular expressions to capture the following and draw the FSM.
 >
 > > [!question]+ Question 2.1/2.2 A ([[regex-and-cfg]])
+> >
 > > Strings in C. These are delimited by double quotes ("), and may not
 > > contain newline characters. They may contain double-quote or backslash
 > > characters if and only if those characters are “escaped” by a preceding
@@ -51,10 +55,12 @@ Collections of problems given by professor Tao.
 > > > ```
 >
 > > [!question]+ Question 2.1/2.2 B
+> >
 > > Comments in Pascal. These are delimited by `(* and *)` or by `{ and }`.
 > > They are not permitted to nest.
 > >
 > > > [!success]- solution
+> > >
 > > > **regex for `(* and *)`:** `\(\*[^*]*\*\)`
 > > > Since both `(` and `*` have special meanings in regex, they need to be escaped with a `\`.
 > > > This applies for the same for the closing `*` and the `)`.
@@ -80,10 +86,10 @@ Collections of problems given by professor Tao.
 > > > 6 --> 6: non rbracket
 > > > 6 --> 7: rbracket
 > > > 7 --> [*]
-> > >
 > > > ```
 >
 > > [!question]+ Question 2.1/2.2 C
+> >
 > > Numeric constants in C. These are octal, decimal, or hexadecimal integers,
 > > or decimal or hexadecimal floating-point values. An octal integer begins
 > > with 0, and may contain only the digits 0–7. A hexadecimal integer begins
@@ -198,6 +204,7 @@ Collections of problems given by professor Tao.
 > > > ```
 >
 > > [!question]+ Question 2.1/2.2 D
+> >
 > > Floating-point constants in Ada. These match the definition of real in
 > > Example 2.3, except that (1) a digit is required on both sides of the
 > > decimal point, (2) an underscore is permitted between digits, and (3) an
@@ -231,6 +238,7 @@ Collections of problems given by professor Tao.
 > > > ```
 >
 > > [!question]+ Question 2.1/2.2 E
+> >
 > > Inexact constants in Scheme. Scheme allows real numbers to be explicitly
 > > inexact (imprecise). A programmer who wants to express all constants
 > > using the same number of characters can use sharp signs (#) in place of
@@ -270,6 +278,7 @@ Collections of problems given by professor Tao.
 > > > ```
 >
 > > [!question]+ Question 2.1/2.2 F
+> >
 > > Financial quantities in American notation. These have a leading dollar
 > > sign ($), an optional string of asterisks (\*—used on checks to discourage
 > > fraud), a string of decimal digits, and an optional fractional part
@@ -282,8 +291,6 @@ Collections of problems given by professor Tao.
 > > remains regular.)
 > >
 > > > [!success]- solution
-> > >
-> > > **regex:**
 > > >
 > > > ```mermaid
 > > > stateDiagram-v2
@@ -346,6 +353,7 @@ Collections of problems given by professor Tao.
 > > **
 > >
 > > > [!success]- solution to part a
+> > >
 > > > **prints:** 9, 4, 2, 3
 > > >
 > > > ```
@@ -394,9 +402,11 @@ Collections of problems given by professor Tao.
 > > > main should be at the very bottom of the stack.
 > >
 > > > [!success]- solution to part c
+> > >
 > > > A is able to find g because of the enclosing scope or is a global variable.
 >
 > > [!question]+ Question 3.11
+>
 > > Consider the following pseudocode:
 > >
 > > ```
@@ -422,6 +432,7 @@ Collections of problems given by professor Tao.
 > [!question]- Chapter 4 Questions
 >
 > > [!question]+ Question 4.11
+> >
 > > Consider the following CFG for floating-point constants, without
 > > exponential notation. (Note that this exercise is somewhat artificial: the
 > > language in question is regular, and would be handled by the scanner of a
@@ -454,3 +465,87 @@ Collections of problems given by professor Tao.
 > > > {digit.val := 7}
 > > > {digit.val := 8}
 > > > {digit.val := 9}
+
+> [!question]+ Chapter 6 Questions
+>
+> > [!question]+ Question 6.18 ([[tree-traversal]])
+> > Revise the algorithm of Figure 6.6 so that it performs an in-order
+> > enumeration, rather than preorder.
+> >
+> > ```java
+> > class BinTree<T> implements Iterable<T> {
+> >     BinTree<T> left;
+> >     BinTree<T> right;
+> >     T val;
+> >     ...
+> >
+> >     // other methods: insert, delete, lookup, ...
+> >
+> >     public Iterator<T> iterator() {
+> >         return new TreeIterator(this);
+> >     }
+> >     private class TreeIterator implements Iterator<T> {
+> >         private Stack<BinTree<T>> s = new Stack<BinTree<T>>();
+> >         TreeIterator(BinTree<T> n) {
+> >             if (n.val != null) s.push(n);
+> >         }
+> >         public boolean hasNext() {
+> >             return !s.empty();
+> >         }
+> >         public T next() {
+> >             if (!hasNext()) throw new NoSuchElementException();
+> >             BinTree<T> n = s.pop();
+> >             if (n.right != null) s.push(n.right);
+> >             if (n.left != null) s.push(n.left);
+> >             return n.val;
+> >         }
+> >         public void remove() {
+> >             throw new UnsupportedOperationException();
+> >         }
+> >     }
+> > }
+> > ```
+> >
+> > > [!success]- solution
+> > >
+> > > ```java
+> > > class BinTree<T> implements Iterable<T> {
+> > >
+> > >   BinTree<T> left;
+> > >   BinTree<T> right;
+> > >   T val;
+> > >   ...
+> > >
+> > >   // other methods: insert, delete, lookup, ...
+> > >
+> > >   public Iterator<T> iterator() {
+> > >       return new TreeIterator(this);
+> > >   }
+> > >   private class TreeIterator implements Iterator<T> {
+> > >       private Stack<BinTree<T>> s = new Stack<BinTree<T>>();
+> > >       TreeIterator(BinTree<T> n) {
+> > >           // solution
+> > >           while (n.val != null) {
+> > >               s.push(n);
+> > >               n = n.left;
+> > >           }
+> > >       }
+> > >       public boolean hasNext() {
+> > >           return !s.empty();
+> > >       }
+> > >       public T next() {
+> > >           if (!hasNext()) throw new NoSuchElementException();
+> > >           BinTree<T> n = s.pop();
+> > >           // inorder (solution)
+> > >           while (n.right != null) {
+> > >               s.push(n.right);
+> > >               n = n.left;
+> > >           }
+> > >           return n.val;
+> > >       }
+> > >       public void remove() {
+> > >           throw new UnsupportedOperationException();
+> > >       }
+> > >   }
+> > > }
+> > > ```
