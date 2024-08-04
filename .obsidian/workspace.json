@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "zettel/regex-and-cfg.md",
+                "file": "zettel/priority-queue.md",
                 "mode": "preview",
                 "source": false
               }
@@ -31,6 +31,7 @@
       {
         "id": "5d1c14d14fff0666",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "dcce0c0d9e381974",
@@ -70,6 +71,7 @@
       {
         "id": "26c9c62669535882",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "4267c5240b98eb14",
@@ -83,7 +85,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 311.5
+    "width": 321.5
   },
   "right": {
     "id": "4835bfd4c8b80940",
@@ -99,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "zettel/regex-and-cfg.md",
+                "file": "zettel/priority-queue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "zettel/regex-and-cfg.md",
+                "file": "zettel/priority-queue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "zettel/regex-and-cfg.md"
+                "file": "zettel/priority-queue.md"
               }
             }
           },
@@ -168,32 +170,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dcce0c0d9e381974",
+  "active": "ca067f8478cf0269",
   "lastOpenFiles": [
-    "2024-W31.md",
-    "zettel/regex-and-cfg.md",
-    "zettel/python-basics.md",
-    "zettel/lc-tmpl.md",
-    "zettel/tree-traversal.md",
     "zettel/CSCI-316_Tao-Summer-2024.md",
-    "home/python-basics.md~",
-    "home/CSCI-316_Tao-Summer-2024.md~",
+    "zettel/binary-tree.md",
+    "zettel/bfs-dfs.md",
+    "zettel/heaps.md",
+    "zettel/python-lc.md",
+    "zettel/priority-queue.md",
+    "zettel/lc-tmpl.md",
+    "zettel/python-lc.md~",
+    "https:/docs.python.org/3/library",
+    "https:/docs.python.org/3",
+    "https:/docs.python.org",
+    "https:",
+    "zettel/python-basics.md~",
+    "zettel/heaps.md~",
+    "zettel/4913",
+    "zettel/asset/images/complete-binary-tree.png",
+    "zettel/asset/images/perfect-binary-tree.png",
+    "zettel/asset/images/full-binary-tree.png",
+    "zettel/binary-tree.md~",
+    "zettel/priority-queue.md~",
+    "zettel/regex-and-cfg.md",
+    "2024-W31.md",
+    "zettel/tree-traversal.md",
     "home/test/test.md",
-    "home/test",
     "home/2024-08-02.md",
-    "home/tree-traversal.md~",
     "zettel/asset/images/inorder-traversal.png",
     "zettel/asset/images/preorder-traversal.png",
     "zettel/asset/images/postorder-traversal.png",
-    "home/4913",
-    "home/lc-tmpl.md~",
     "home/1722403751-OHWX.md",
-    ";",
-    "home/regex-and-cfg.md~",
     "home/1722298641-NHLN.md",
-    "^\"",
     "home/1722230597-WOFV.md",
-    "home/CSCI 316 - Tao Summer 2024.md~",
     "home/1722229188-ZOOB.md",
     "2024-07-28.md",
     "Untitled.canvas"

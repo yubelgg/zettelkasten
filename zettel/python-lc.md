@@ -1,5 +1,5 @@
 ---
-id: python-basics
+id: python-lc
 aliases: []
 tags:
   - code-snippets
@@ -118,7 +118,7 @@ Counter(list1) # => Counter({'x': 4, 'y': 2, 'z': 2})
 Counter("Welcome to Guru99 Tutorials!") # => Counter({'o': 3, 'u': 3, 'e': 2, ...})
 ```
 
-## Deque
+## [Deque](https://docs.python.org/3/library/collections.html#deque-objects)
 
 A double-ended queue allows you to remove and add elements from either ends.
 
@@ -133,3 +133,103 @@ A double-ended queue allows you to remove and add elements from either ends.
 > |  popleft()   |     O(1)     |         O(1)         |
 > |   extend()   |     O(k)     |         O(k)         |
 > | extendleft() |     O(k)     |         O(k)         |
+
+```python
+from collections import deque
+
+queue = deque(['name','age','DOB'])
+
+queue.append("append_from_right")   # Append from right
+queue.pop()     # Pop from right
+
+queue.appendleft("fromLeft")        # Append from left
+queue.popleft() # Pop from left
+
+queue.index(element,begin_index,end_index)  # Returns position of first match of element.
+queue.insert(index,element)
+queue.remove()  # removes first occurrance
+queue.count()
+
+queue.reverse() # reverses order of queue elements
+```
+
+## [Heapq](https://docs.python.org/3/library/heapq.html#module-heapq)
+
+In python we access a [[priority-queue |priority queue]] implemented using a [[heaps |heap]] with **heapq** library.
+
+Using `heaps.heaify()` can reduce **time** and **space** complexity since it operations
+is done in-place.
+
+```python
+import heapq    # (minHeap by Default)
+
+nums = [5, 7, 9, 1, 3]
+
+heapq.heapify(nums) # converts list into heap. Can be converted back to list by list(nums).
+heapq.heappush(nums,element) # Push an element into the heap
+heapq.heappop(nums) # Pop an element from the heap
+#heappush(heap, ele) :- This function is used to insert the element mentioned in its arguments into heap. The order is adjusted, so as heap structure is maintained.
+#heappop(heap) :- This function is used to remove and return the smallest element from heap. The order is adjusted, so as heap structure is maintained.
+
+heapq.nlargest(k, iterable, key = fun)
+heapq.nsmallest(k, iterable, key = fun)
+```
+
+## [Sets](https://docs.python.org/3/library/stdtypes.html#set)
+
+A set is a collection which is unordered, immutable, unindexed, and contains no duplicates.
+
+```python
+set = {1,2,3}
+
+set.add(item)
+set.remove(item)
+set.discard(item) | set.remove(item) # removes item | remove will throw error if item is not there, discard will not
+set.pop() # removes random item (since unordered)
+
+set.isdisjoint(anotherSet)  # returns true if no common elements
+set.issubset(anotherSet)    # returns true if all elements from anotherSet is present in original set
+set.issuperset(anotherSet)  # returns true if all elements from original set is present in anotherSet
+
+set.difference(anotherSet)          # returns set of items ONLY in first set
+set.difference_update(anotherSet)   # removes common elements from first set
+set.intersection(anotherSet)        # returns new set with common elements
+set.intersection_update(anotherSet) # modifies set keeping only common elements
+set.symmetric_difference(anotherSet) # returns set of all non-common elements of both sets
+set.symmetric_difference_update(anotherSet) # same as symmetric_difference but changes are made on original set
+
+set.union(anotherSet)   # ...
+set.update(anotherSet)  # adds anotherSet without duplicate
+```
+
+## [Tuples](https://docs.python.org/3/library/stdtypes.html#tuples)
+
+Tuples are immutable sequences, typically used to store collections of heterogeneous data.
+Such as allowing storage in a set or dict instance.
+
+```python
+tuple = (1,2,3,1)
+
+tuple.count(1) # returns occurence of an item
+tuple.index(1) # returns index of first 1 in array
+```
+
+## [Strings](https://docs.python.org/3/library/stdtypes.html#string-methods)
+
+Some methods of the string class.
+
+```python
+s = "Hello World!"
+
+s.join("!!")    # Hello World!!!
+for "Wor" in s  # returns boolean
+
+s.isnumeric()   # returns true or false
+s.isdecimal()   # returns true or false
+s.isdigit()     # returns true of false
+
+s=list(s)       # Output: ["Hello", "World!!"]
+
+s.find("Wor"[, start[, end]])   # return index of sub string, otherwise -1
+s.index("Wor"[, start[, end]])  # like find() but throws error if not found
+```
