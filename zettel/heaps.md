@@ -6,7 +6,7 @@ tags:
   - code-snippets
 ---
 
-## Heaps
+# Heaps
 
 A **heap** is a compelete [[binary-tree |binary tree]]:
 
@@ -23,20 +23,20 @@ Common heap operations:
 
 1. Full Binary Tree
 
-- binary tree in which **each** parent has **exactly** two or no children.
-- ![[full-binary-tree.png]]
+   - binary tree in which **each** parent has **exactly** two or no children.
+   - ![[full-binary-tree.png]]
 
 2. Perfect Binary Tree
 
-- binary tree in which **every** parent has **exactlyd** two children.
-- ![[perfect-binary-tree.png]]
+   - binary tree in which **every** parent has **exactlyd** two children.
+   - ![[perfect-binary-tree.png]]
 
 3. Complete Binary Tree
 
-- every level is completely filled.
-- all left nodes must lean from the left.
-- last element doesn't have to have a right sibling (doesn't need to be a full binary tree).
-- ![[complete-binary-tree.png]]
+   - every level is completely filled.
+   - all left nodes must lean from the left.
+   - last element doesn't have to have a right sibling (doesn't need to be a full binary tree).
+   - ![[complete-binary-tree.png]]
 
 ```python
 # Binary Tree in Python

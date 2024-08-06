@@ -11,7 +11,7 @@ tags:
   - tree-traversal
 ---
 
-## Problem Sets
+# Problem Sets
 
 Collections of problems given by professor Tao.
 

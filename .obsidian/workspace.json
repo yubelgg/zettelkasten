@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "zettel/priority-queue.md",
+                "file": "zettel/python-lc.md",
                 "mode": "preview",
                 "source": false
               }
@@ -39,7 +39,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -85,7 +85,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.5
+    "width": 328.5
   },
   "right": {
     "id": "4835bfd4c8b80940",
@@ -101,7 +101,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "zettel/priority-queue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "zettel/priority-queue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,9 +138,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "zettel/priority-queue.md"
-              }
+              "state": {}
             }
           },
           {
@@ -170,31 +166,46 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ca067f8478cf0269",
+  "active": "4267c5240b98eb14",
   "lastOpenFiles": [
-    "zettel/CSCI-316_Tao-Summer-2024.md",
-    "zettel/binary-tree.md",
-    "zettel/bfs-dfs.md",
-    "zettel/heaps.md",
     "zettel/python-lc.md",
-    "zettel/priority-queue.md",
-    "zettel/lc-tmpl.md",
+    "zettel/closure.md",
+    "zettel/pointers.md",
     "zettel/python-lc.md~",
-    "https:/docs.python.org/3/library",
-    "https:/docs.python.org/3",
-    "https:/docs.python.org",
-    "https:",
-    "zettel/python-basics.md~",
-    "zettel/heaps.md~",
+    "zettel/pointers.md~",
+    "zettel/types.md",
+    "zettel/types.md~",
+    "zettel/eval-attributes.md",
+    "zettel/eval-attributes.md~",
+    "zettel/asset/images/attributes-2.png",
+    "zettel/asset/images/attributes-1.png",
+    "zettel/closure.md~",
+    "zettel/Untitled.md",
+    "zettel/asset/images/subroutine-closure.png",
+    "zettel/heap-mem.md",
+    "zettel/heap-mem.md~",
+    "zettel/stack-mem.md",
     "zettel/4913",
+    "zettel/binding-time.md~",
+    "zettel/object-lifetime-storage-management.md~",
+    "zettel/subroutines.md~",
+    "zettel/asset/images/stack-mem-demo.png",
+    "zettel/bfs-dfs.md",
+    "zettel/subroutines.md",
+    "zettel/object-lifetime-storage-management.md",
+    "zettel/static-mem.md",
+    "zettel/binding-time.md",
+    "zettel/heaps.md",
+    "zettel/tree-traversal.md",
+    "zettel/binary-tree.md",
+    "zettel/priority-queue.md",
+    "zettel/CSCI-316_Tao-Summer-2024.md",
+    "zettel/lc-tmpl.md",
     "zettel/asset/images/complete-binary-tree.png",
     "zettel/asset/images/perfect-binary-tree.png",
     "zettel/asset/images/full-binary-tree.png",
-    "zettel/binary-tree.md~",
-    "zettel/priority-queue.md~",
     "zettel/regex-and-cfg.md",
     "2024-W31.md",
-    "zettel/tree-traversal.md",
     "home/test/test.md",
     "home/2024-08-02.md",
     "zettel/asset/images/inorder-traversal.png",
@@ -202,9 +213,6 @@
     "zettel/asset/images/postorder-traversal.png",
     "home/1722403751-OHWX.md",
     "home/1722298641-NHLN.md",
-    "home/1722230597-WOFV.md",
-    "home/1722229188-ZOOB.md",
-    "2024-07-28.md",
     "Untitled.canvas"
   ]
 }

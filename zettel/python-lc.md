@@ -6,7 +6,7 @@ tags:
   - resources
 ---
 
-### Data types
+## Data types
 
 ```mermaid
 graph TD;
@@ -102,6 +102,13 @@ dict.setDefault(key,default_value)
 
 # if key doesn't exist, it will create it and won't throw an error
 myDictionary = defaultdict(list)
+
+# sorting by key `0` or value `1`
+diction = dict(sorted(dict.items(), key=lambda v: v[0], reverse=True))
+
+# iterate with for loop (unpacking)
+for k, v in diction.items():
+    ...
 ```
 
 [counter](https://docs.python.org/3/library/collections.html#counter-objects) object is a sub class of dictionary that counts the frequency of elements
@@ -114,8 +121,12 @@ from collections import Counter
 list1 = ['x','y','z','x','x','x','y', 'z']
 
 # Initialization
-Counter(list1) # => Counter({'x': 4, 'y': 2, 'z': 2})
+c = Counter(list1) # => Counter({'x': 4, 'y': 2, 'z': 2})
 Counter("Welcome to Guru99 Tutorials!") # => Counter({'o': 3, 'u': 3, 'e': 2, ...})
+
+s = sorted(c.keys())    # sorted by key -> returns arr of keys
+s = sorted(c.values())  # sorted by values -> returns arr of values
+s = sorted(c.items())   # sorted by keys -> returns arr of tuples
 ```
 
 ## [Deque](https://docs.python.org/3/library/collections.html#deque-objects)
