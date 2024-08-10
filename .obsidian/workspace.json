@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "zettel/python-lc.md",
+                "file": "zettelkasten/problem-set.md",
                 "mode": "preview",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "stack",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 328.5
+    "width": 293.5
   },
   "right": {
     "id": "4835bfd4c8b80940",
@@ -101,6 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "zettelkasten/problem-set.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,6 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "zettelkasten/problem-set.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,11 +140,19 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "zettelkasten/problem-set.md"
+              }
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "454011ba6bae608d",
+        "type": "tabs",
+        "children": [
           {
-            "id": "020155a4fd72e575",
+            "id": "45079c3d775c98d5",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -153,8 +163,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5,
-    "collapsed": true
+    "width": 290.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,53 +175,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4267c5240b98eb14",
+  "active": "ca067f8478cf0269",
   "lastOpenFiles": [
-    "zettel/python-lc.md",
+    "zettelkasten/pointers.md",
+    "zettelkasten/parameter-passing.md",
+    "zettelkasten/stack-mem.md",
+    "zettelkasten/problem-set.md",
+    "zettel/parameter-passing.md",
+    "zettel/binding-time.md",
+    "zettel/overloading-namehiding.md",
     "zettel/closure.md",
-    "zettel/pointers.md",
-    "zettel/python-lc.md~",
-    "zettel/pointers.md~",
-    "zettel/types.md",
-    "zettel/types.md~",
-    "zettel/eval-attributes.md",
-    "zettel/eval-attributes.md~",
-    "zettel/asset/images/attributes-2.png",
-    "zettel/asset/images/attributes-1.png",
-    "zettel/closure.md~",
-    "zettel/Untitled.md",
-    "zettel/asset/images/subroutine-closure.png",
-    "zettel/heap-mem.md",
-    "zettel/heap-mem.md~",
+    "zettel/python-lc.md",
     "zettel/stack-mem.md",
+    "zettel/problem-set.md",
+    "zettel/pointers.md",
+    "zettel/struct-records.md",
+    "zettel/problem-set.md~",
     "zettel/4913",
-    "zettel/binding-time.md~",
-    "zettel/object-lifetime-storage-management.md~",
-    "zettel/subroutines.md~",
-    "zettel/asset/images/stack-mem-demo.png",
+    "zettel/parameter-passing.md~",
+    "zettel/pointers.md~",
+    "zettel/stack-mem.md~",
+    "zettel/asset/images/stack-mem-demo2.png",
+    "zettel/asset/images/subroutine-nesting.png",
+    "zettel/passed-by.md~",
+    "zettel/python-lc.md~",
+    "zettel/struct-records.md~",
+    "zettel/asset/images/structs-cpp-java.png",
+    "zettel/types.md~",
+    "zettel/CSCI-316_Tao-Summer-2024.md",
+    "zettel/types.md",
+    "zettel/heap-mem.md",
+    "zettel/eval-attributes.md",
+    "zettel/linked-list.md",
+    "zettel/tree-traversal.md",
+    "zettel/heaps.md",
+    "zettel/closure.md~",
+    "zettel/1723053814-ANZC.md",
     "zettel/bfs-dfs.md",
+    "zettel/static-mem.md",
+    "zettel/binary-tree.md",
     "zettel/subroutines.md",
     "zettel/object-lifetime-storage-management.md",
-    "zettel/static-mem.md",
-    "zettel/binding-time.md",
-    "zettel/heaps.md",
-    "zettel/tree-traversal.md",
-    "zettel/binary-tree.md",
-    "zettel/priority-queue.md",
-    "zettel/CSCI-316_Tao-Summer-2024.md",
-    "zettel/lc-tmpl.md",
+    "zettel/asset/images/attributes-2.png",
+    "zettel/asset/images/attributes-1.png",
+    "zettel/asset/images/subroutine-closure.png",
+    "zettel/asset/images/stack-mem-demo.png",
     "zettel/asset/images/complete-binary-tree.png",
     "zettel/asset/images/perfect-binary-tree.png",
     "zettel/asset/images/full-binary-tree.png",
-    "zettel/regex-and-cfg.md",
-    "2024-W31.md",
-    "home/test/test.md",
-    "home/2024-08-02.md",
-    "zettel/asset/images/inorder-traversal.png",
-    "zettel/asset/images/preorder-traversal.png",
-    "zettel/asset/images/postorder-traversal.png",
-    "home/1722403751-OHWX.md",
-    "home/1722298641-NHLN.md",
     "Untitled.canvas"
   ]
 }
