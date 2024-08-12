@@ -746,3 +746,192 @@ in the program, to ensure that cleanup always occurs when leaving a scope?
 >     cout<<"constructor created successfully";//main class output generated
 > }
 > ```
+
+## Chapter 10
+
+**Question 10.4/10.6**
+Using the C# indexer mechanism, create a hash table class that can be indexed like an
+array. (In effect, create a simple version of the System.Collections.Hashtable container
+class.) Alternatively, use an overloaded version of operator[] to build a similar class in C++.
+
+> [!success]+ solution
+>
+> ```cpp
+> #include <iostream>
+> #include <list>
+> #include <vector>
+> #include <stdexcept>
+>
+> template <typename K, typename V>
+> class SimpleHashTable {
+> private:
+>     static const int defaultSize = 100;
+>     std::vector<std::list<std::pair<K, V>>> buckets;
+>     int getBucketIndex(const K& key) const {
+>         return std::hash<K>{}(key) % buckets.size();
+>     }
+> public:
+>     SimpleHashTable(int size = defaultSize) : buckets(size) {}
+>     V& operator[](const K& key) {
+>         int index = getBucketIndex(key);
+>         for (auto& pair : buckets[index]) {
+>             if (pair.first == key) {
+>                 return pair.second;
+>             }
+>         }
+>         buckets[index].emplace_back(key, V());
+>         return buckets[index].back().second;
+>     }
+>     bool containsKey(const K& key) const {
+>         int index = getBucketIndex(key);
+>         for (const auto& pair : buckets[index]) {
+>             if (pair.first == key) {
+>                 return true;
+>             }
+>         }
+>         return false;
+>     }
+>     void remove(const K& key) {
+>         int index = getBucketIndex(key);
+>         auto& bucket = buckets[index];
+>         for (auto it = bucket.begin(); it != bucket.end(); ++it) {
+>             if (it->first == key) {
+>                 bucket.erase(it);
+>                 return;
+>             }
+>         }
+>         throw std::runtime_error("Key not found.");
+>     }
+> };
+> // Example usage
+> int main() {
+>     SimpleHashTable<std::string, int> hashTable;
+>     // Adding elements
+>     hashTable["one"] = 1;
+>     hashTable["two"] = 2;
+>     hashTable["three"] = 3;
+>     // Accessing elements
+>     std::cout << "Value for 'one': " << hashTable["one"] << std::endl;
+>     std::cout << "Value for 'two': " << hashTable["two"] << std::endl;
+>     // Checking if a key exists
+>     std::cout << "Contains key 'three': " << hashTable.containsKey("three") << std::endl;
+>     std::cout << "Contains key 'four': " << hashTable.containsKey("four") << std::endl;
+>     // Removing an element
+>     hashTable.remove("two");
+>     std::cout << "Contains key 'two' after removal: " << hashTable.containsKey("two") << std::endl;
+>     return 0;
+> }
+> ```
+
+**Question 10.5/10.6**
+In the spirit of Example 10.8, write a double-ended queue (deque) abstraction (pronounced
+“deck”), derived from a doubly linked list base class.
+
+> [!scucess]+ solution
+> Doubly linked list base class
+>
+> ```cpp
+> #include <iostream>
+>
+> template <typename T>
+> class DoublyLinkedListNode {
+> public:
+>     T value;
+>     DoublyLinkedListNode* next;
+>     DoublyLinkedListNode* prev;
+>     DoublyLinkedListNode(T val) : value(val), next(nullptr), prev(nullptr) {}
+> };
+> template <typename T>
+> class DoublyLinkedList {
+> protected:
+>     DoublyLinkedListNode<T>* head;
+>     DoublyLinkedListNode<T>* tail;
+> public:
+>     DoublyLinkedList() : head(nullptr), tail(nullptr) {}
+>     bool isEmpty() const {
+>         return head == nullptr;
+>     }
+>     void addFirst(T value) {
+>         auto newNode = new DoublyLinkedListNode<T>(value);
+>         if (isEmpty()) {
+>             head = tail = newNode;
+>         } else {
+>             newNode->next = head;
+>             head->prev = newNode;
+>             head = newNode;
+>         }
+>     }
+>     void addLast(T value) {
+>         auto newNode = new DoublyLinkedListNode<T>(value);
+>         if (isEmpty()) {
+>             head = tail = newNode;
+>         } else {
+>             tail->next = newNode;
+>             newNode->prev = tail;
+>             tail = newNode;
+>         }
+>     }
+>     T removeFirst() {
+>         if (isEmpty()) throw std::runtime_error("The list is empty.");
+>         auto value = head->value;
+>         auto temp = head;
+>         head = head->next;
+>         if (head) {
+>             head->prev = nullptr;
+>         } else {
+>             tail = nullptr;
+>         }
+>         delete temp;
+>         return value;
+>     }
+>     T removeLast() {
+>         if (isEmpty()) throw std::runtime_error("The list is empty.");
+>         auto value = tail->value;
+>         auto temp = tail;
+>         tail = tail->prev;
+>         if (tail) {
+>             tail->next = nullptr;
+>         } else {
+>             head = nullptr;
+>         }
+>         delete temp;
+>         return value;
+>     }
+> };
+> ```
+>
+> Deque derived from doubly linked list
+>
+> ```cpp
+> template <typename T>
+> class Deque : public DoublyLinkedList<T> {
+> public:
+>     void enqueueFront(T value) {
+>         this->addFirst(value);
+>     }
+>     void enqueueBack(T value) {
+>         this->addLast(value);
+>     }
+>     T dequeueFront() {
+>         return this->removeFirst();
+>     }
+>     T dequeueBack() {
+>         return this->removeLast();
+>     }
+> };
+> // Example usage
+> int main() {
+>     Deque<int> deque;
+>     // Adding elements to the front and back
+>     deque.enqueueFront(1);
+>     deque.enqueueBack(2);
+>     deque.enqueueFront(0);
+>     // Removing elements from the front and back
+>     std::cout << "Dequeue Front: " << deque.dequeueFront() << std::endl;
+>     std::cout << "Dequeue Back: " << deque.dequeueBack() << std::endl;
+>     // Adding more elements
+>     deque.enqueueBack(3);
+>     std::cout << "Dequeue Front: " << deque.dequeueFront() << std::endl;
+>     return 0;
+> }
+> ```
