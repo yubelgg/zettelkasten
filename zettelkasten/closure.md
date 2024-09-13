@@ -12,6 +12,8 @@ A closure is a programming concept where a subroutine (such as a function or met
 retains access to variables from its lexical scope even when the subroutine is executed
 outside that scope.
 
+![asset/subroutine-closure.png]
+
 ![[subroutine-closure.png]]
 
 ```python

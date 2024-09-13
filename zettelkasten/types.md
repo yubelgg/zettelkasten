@@ -1,7 +1,8 @@
 ---
+title: types
 id: types
-aliases: []
-tags: []
+aliases: 
+tags:
 ---
 
 # Types Purpose
