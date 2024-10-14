@@ -8,18 +8,55 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ca067f8478cf0269",
+            "id": "60bbc4ec4eb56537",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "zettelkasten/problem-set.md",
+                "file": "zettelkasten/CSCI-316/oop.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "103afcc52a622235",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zettelkasten/CSCI-316/regex-and-cfg.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c7736def6be84565",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zettelkasten/CSCI-316/lc-tmpl.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a66d7c7a4dd90b4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zettelkasten/ai-csci363/intro-ai.md",
                 "mode": "preview",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -101,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "zettelkasten/problem-set.md",
+                "file": "zettelkasten/ai-csci363/intro-ai.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "zettelkasten/problem-set.md",
+                "file": "zettelkasten/ai-csci363/intro-ai.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,11 +178,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "zettelkasten/problem-set.md"
+                "file": "zettelkasten/ai-csci363/intro-ai.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "454011ba6bae608d",
@@ -175,54 +213,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ca067f8478cf0269",
+  "active": "a66d7c7a4dd90b4b",
   "lastOpenFiles": [
-    "zettelkasten/binding-time.md",
-    "zettelkasten/CSCI-316_Tao-Summer-2024.md",
-    "zettelkasten/overloading-namehiding.md",
-    "zettelkasten/stack-mem.md",
-    "zettelkasten/pointers.md",
-    "zettelkasten/bfs-dfs.md",
-    "zettelkasten/eval-attributes.md",
-    "zettelkasten/heap-mem.md",
-    "zettelkasten/object-lifetime-storage-management.md",
-    "zettelkasten/subroutines.md",
-    "zettelkasten/priority-queue.md",
-    "zettelkasten/static-mem.md",
-    "zettelkasten/binary-tree.md",
-    "zettelkasten/heaps.md",
-    "zettelkasten/linked-list.md",
-    "zettelkasten/closure.md",
-    "zettelkasten/types.md",
-    "zettelkasten/struct-records.md",
-    "zettelkasten/python-lc.md",
-    "zettelkasten/problem-set.md",
-    "zettelkasten/parameter-passing.md",
-    "zettelkasten/tree-traversal.md",
-    "zettelkasten/correct-solutions.md",
-    "zettelkasten/correct-solutions.md~",
-    "zettelkasten/4913",
-    "zettelkasten/asset/books/solution 316.pdf",
-    "zettelkasten/lc-tmpl.md",
-    "zettelkasten/regex-and-cfg.md",
-    "zettelkasten/problem-set.md~",
-    "zettel/parameter-passing.md",
-    "zettel/problem-set.md~",
-    "zettel/4913",
-    "zettel/parameter-passing.md~",
-    "zettel/pointers.md~",
-    "zettel/stack-mem.md~",
-    "zettel/asset/images/stack-mem-demo2.png",
-    "zettel/asset/images/subroutine-nesting.png",
-    "zettel/passed-by.md~",
-    "zettel/asset/images/structs-cpp-java.png",
-    "zettel/asset/images/attributes-2.png",
-    "zettel/asset/images/attributes-1.png",
-    "zettel/asset/images/subroutine-closure.png",
-    "zettel/asset/images/stack-mem-demo.png",
-    "zettel/asset/images/complete-binary-tree.png",
-    "zettel/asset/images/perfect-binary-tree.png",
-    "zettel/asset/images/full-binary-tree.png",
+    "zettelkasten/ai-csci363/uninformed-search.md",
+    "zettelkasten/ai-csci363/intro-ai.md",
+    "zettelkasten/CSCI-316/tree-traversal.md",
+    "zettelkasten/Daily",
+    "zettelkasten/CSCI-316/lc-tmpl.md",
+    "zettelkasten/CSCI-316/regex-and-cfg.md",
+    "zettelkasten/CSCI-316/oop.md",
+    "zettelkasten/data-comms-CSCI348/midterm-1-review.md",
+    "zettelkasten/CSCI-316",
+    "zettelkasten/data-comms-CSCI348/lu257507e6sgy.tmp",
+    "zettelkasten/asset/images/spanning-tree-table.jpg",
+    "zettelkasten/asset/images/spanning-tree.jpg",
+    "zettelkasten/asset/images/question-10b.png",
+    "zettelkasten/asset/images/question-10.png",
+    "zettelkasten/asset/images/question 3b.jpg",
+    "zettelkasten/asset/images/question 3a.jpg",
+    "zettelkasten/asset/images/question 2-2.jpg",
+    "zettelkasten/asset/images/asynchronous-communication.png",
+    "zettelkasten/asset/images/synchronous-communication.png",
+    "zettelkasten/asset/images/parallel-vs-serial-digital-communication.png",
+    "zettelkasten/data-comms-CSCI348/midterm-1-review.pdf",
+    "zettelkasten/data-comms-CSCI348/datagram-network.md",
+    "zettelkasten/data-comms-CSCI348/02-LinkLayer-PhysicalLayer-Solutions.pdf",
+    "zettelkasten/data-comms-CSCI348/lu911381169owr.tmp",
+    "zettelkasten/data-comms-CSCI348/01-Introduction-Solutions.pdf",
+    "zettelkasten/data-comms-CSCI348/lu88028514hclk.tmp",
+    "zettelkasten/CSCI-316/decorators.md",
+    "zettelkasten/CSCI-316/APIs.md",
+    "zettelkasten/oop.md~",
+    "zettelkasten/APIs.md~",
+    "Untitled 3.md",
+    "Untitled 2.md",
+    "Untitled 1.md",
+    "zettelkasten/test.md",
+    "zettelkasten/data-comms-CSCI348/intro-data-comms.md",
+    "zettelkasten/data-comms-CSCI348/link-layer.md",
+    "zettelkasten/ML-CSCI325/sept-5.md",
+    "zettelkasten/operating-systems/general-overview.md",
+    "zettelkasten/operating-systems/processes.md",
+    "zettelkasten/operating-systems/1725910592-WGWS.md",
+    "zettelkasten/CSCI-316/bash.md",
+    "zettelkasten/CSCI-316/CSCI-316_Tao-Summer-2024.md",
+    "zettelkasten/CSCI-316/problem-set.md",
+    "zettelkasten/CSCI-316/types.md",
+    "zettelkasten/CSCI-316/closure.md",
+    "zettelkasten/CSCI-316/stack-mem.md",
     "Untitled.canvas"
   ]
 }
