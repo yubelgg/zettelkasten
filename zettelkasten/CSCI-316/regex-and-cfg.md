@@ -5,7 +5,7 @@ tags:
   - notes
 ---
 
-# Regular Expressions and Context Free Grammer
+# Regular Expressions and Context Free Grammar
 
 ## Regular Expressions
 

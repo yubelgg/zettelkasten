@@ -6,3 +6,6 @@
 .obsidian/hotkeys.json
 .obsidian/plugins/*
 .obsidian/themes/*
+.git/*
+zettelkasten/.venv/*
+zettelkasten/ML-CSCI325/code/.venv/*
