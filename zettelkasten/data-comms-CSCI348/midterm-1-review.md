@@ -30,7 +30,7 @@ $$
 
 ### Question 2
 
-If I am seding 1 bit to a host in the moon, which of the following is the dominat factor: [[midterm-1-review#^transmission-delay|transmission delay]] or [[midterm-1-review#^propagation-delay|propagation delay]]?
+If I am sending 1 bit to a host in the moon, which of the following is the dominate factor: [[midterm-1-review#^transmission-delay|transmission delay]] or [[midterm-1-review#^propagation-delay|propagation delay]]?
 
 Transmission delay is the time it takes to push all the bits of a message into the link. For 1 bit, this is extremely small, regardless of the transmission speed of the medium. 
 ^transmission-delay
@@ -53,7 +53,7 @@ The propagation delay (1.2813 seconds) is much greater than the transmission del
 **So, the dominant factor is the propagation delay.**
 
 - Distance: enormous distance to the moon.
-- Single bit: trasmitting 1 bit is very fast.
+- Single bit: transmitting 1 bit is very fast.
 - Speed Limit: propagation speed is limited by the speed of light, which is 3 x 10^8 m/s, and constant.
 
 ### Question 3
